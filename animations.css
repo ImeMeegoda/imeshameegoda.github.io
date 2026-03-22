@@ -1,0 +1,90 @@
+/* ============================================================
+   animations.css — Scroll reveals, keyframes, transitions
+   ============================================================ */
+
+/* ── KEYFRAMES ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.65); }
+}
+
+@keyframes slideRight {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+/* ── HERO ENTRANCE ── */
+.hero-tag        { animation: fadeUp 0.7s ease both; }
+.hero h1         { animation: fadeUp 0.7s 0.1s ease both; }
+.hero-subtitle   { animation: fadeUp 0.7s 0.2s ease both; }
+.hero-actions    { animation: fadeUp 0.7s 0.3s ease both; }
+.hero-stats      { animation: fadeUp 0.7s 0.4s ease both; }
+.hero-right      { animation: fadeIn 1s 0.45s ease both; }
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity  0.65s ease,
+    transform 0.65s ease;
+  transition-delay: var(--delay, 0s);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── TIMELINE FADE ── */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── PROJECT CARD HOVER LINE ── */
+.project-card::before { transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+/* ── NAV LINK UNDERLINE ── */
+.nav-links a::after { transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+/* ── PHOTO FRAME OVERLAY ── */
+.photo-frame::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(4,7,10,.55) 100%);
+  pointer-events: none;
+}
+
+/* ── SECTION LABEL LINE ── */
+.section-label::before {
+  transition: width 0.4s ease;
+}
+
+/* ── STAGGER HELPERS (for JS) ── */
+.stagger-1 { --delay: 0.05s; }
+.stagger-2 { --delay: 0.10s; }
+.stagger-3 { --delay: 0.15s; }
+.stagger-4 { --delay: 0.20s; }
+.stagger-5 { --delay: 0.25s; }
+.stagger-6 { --delay: 0.30s; }
+
