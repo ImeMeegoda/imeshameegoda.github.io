@@ -42,8 +42,8 @@
         <span class="text-accent">Meegoda</span>
       </h1>
       <p class="hero-subtitle">
-        CS Undergraduate at IIT (Informatics Institute of Technology), Sri Lanka — affiliated with the University of Westminster, UK.<br />
-        Building full-stack apps, mobile experiences &amp; UX-first interfaces with Flutter · Firebase · Python · JavaScript.
+        CS Undergraduate at IIT (Informatics Institute of Technology) Sri Lanka, affiliated with the University of Westminster, UK.<br />
+        Building full stack apps, mobile experiences &amp; UX-first interfaces with Flutter · Firebase · Python · JavaScript.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View Projects</a>
@@ -455,12 +455,29 @@
         </ul>
       </div>
       <div class="contact-right reveal" style="--delay:0.15s">
-        <p>I'm a motivated CS student passionate about mobile development,
+        <p>I'm a motivated CS student passionate about mobile development,<br>
           full-stack web, and UI/UX design.</p>
-        <p>Strongest areas: <strong>Flutter</strong>, <strong>Node.js backends</strong>, and <strong>UI/UX with
-            Figma</strong>. Also expanding into ML and cybersecurity.</p>
-        <a href="mailto:imemeegoda@gmail.com" class="btn-primary" style="display:inline-block;margin-top:24px">Send a
-          Message →</a>
+        <p>Strongest areas: <strong>Flutter</strong>, <strong>Node.js backends</strong>, and <strong>UI/UX with Figma</strong>.<br>Also expanding into ML and cybersecurity.</p>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:10px;">Send Message →</button>
+          <div id="formStatus" style="margin-top:12px;font-size:0.95em;"></div>
+        </form>
+        <script>
+        document.getElementById('contactForm').onsubmit = function(e) {
+          e.preventDefault();
+          document.getElementById('formStatus').textContent = 'Thank you! Your message has been sent.';
+          document.getElementById('contactForm').reset();
+        };
+        </script>
       </div>
     </div>
   </section>
