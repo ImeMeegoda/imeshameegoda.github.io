@@ -16,7 +16,7 @@
 }
 .contact-form input,
 .contact-form textarea {
-  background: var(--bg-alt);
+  background: #2D1E17;
   border: 1.5px solid var(--border);
   border-radius: 6px;
   color: var(--text);
@@ -27,6 +27,7 @@
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--accent-light);
@@ -164,9 +165,9 @@ body::before {
 }
 
 @keyframes navbarFadeIn {
+
   0% { opacity: 0; transform: translateY(-24px); }
   100% { opacity: 1; transform: translateY(0); }
-}
 }
 #navbar.scrolled { padding-top: 14px; padding-bottom: 14px; background: rgba(4,7,10,.97); }
 
