@@ -95,18 +95,18 @@
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --accent:        #00CFFF;
-  --accent-light:  #7FE9FF;
-  --accent-dim:    #007A99;
-  --bg:          #101926;
-  --bg-alt:      #182235;
-  --surface:     #1B263B;
-  --surface-2:   #22304A;
-  --border:      rgba(0, 207, 255, 0.13);
-  --border-hover:rgba(0, 207, 255, 0.32);
-  --text:        #E6F0FA;
-  --text-muted:  #A9B8C9;
-  --text-dim:    #7A8CA3;
+  --accent:        #00FF99;
+  --accent-light:  #7FFFCB;
+  --accent-dim:    #009966;
+  --bg:          #0B1F16;
+  --bg-alt:      #153D2A;
+  --surface:     #183D2B;
+  --surface-2:   #205C3D;
+  --border:      rgba(0, 255, 153, 0.13);
+  --border-hover:rgba(0, 255, 153, 0.32);
+  --text:        #E6FAF0;
+  --text-muted:  #A9C9B8;
+  --text-dim:    #7AA38C;
   --white:       #FFFFFF;
 }
 

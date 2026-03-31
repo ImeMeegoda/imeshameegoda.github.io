@@ -1,3 +1,148 @@
+/* ── GLOWING TEXT ANIMATION ── */
+.glow-text {
+  animation: glowText 2.2s ease-in-out infinite alternate;
+}
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 8px #00FF99, 0 0 16px #00FF99, 0 0 32px #7FFFCB;
+    color: var(--accent-light);
+  }
+  100% {
+    text-shadow: 0 0 24px #00FF99, 0 0 48px #7FFFCB, 0 0 64px #00FF99;
+    color: #fff;
+  }
+}
+
+/* ── FLOATING BUTTON ANIMATION ── */
+.float-cta {
+  animation: floatCta 2.8s ease-in-out infinite alternate;
+}
+@keyframes floatCta {
+  0% { transform: translateY(0); box-shadow: 0 2px 16px 0 #00FF9955; }
+  100% { transform: translateY(-10px) scale(1.04); box-shadow: 0 8px 32px 0 #00FF9977; }
+}
+/* ── CATEGORY-WISE ENTRANCE ANIMATIONS ── */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+.fade-in-up.delay-1 { animation-delay: 0.15s; }
+.fade-in-up.delay-2 { animation-delay: 0.3s; }
+.fade-in-up.delay-3 { animation-delay: 0.45s; }
+.fade-in-up.delay-4 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  animation: fadeInLeft 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+.fade-in-left.delay-1 { animation-delay: 0.15s; }
+.fade-in-left.delay-2 { animation-delay: 0.3s; }
+.fade-in-left.delay-3 { animation-delay: 0.45s; }
+.fade-in-left.delay-4 { animation-delay: 0.6s; }
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  animation: fadeInScale 0.7s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+.fade-in-scale.delay-1 { animation-delay: 0.18s; }
+.fade-in-scale.delay-2 { animation-delay: 0.36s; }
+.fade-in-scale.delay-3 { animation-delay: 0.54s; }
+.fade-in-scale.delay-4 { animation-delay: 0.72s; }
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ── PHOTO POP-UP ANIMATION ── */
+.photo-wrapper.pop-in {
+  animation: photoPopIn 1.1s cubic-bezier(.23,1.01,.32,1) both;
+}
+@keyframes photoPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(60px);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-8px);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0px);
+  }
+}
+/* ── SECTION ANIMATED BACKGROUNDS ── */
+.bg-about-green {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  width: 180px;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.22;
+}
+.bg-edu-green {
+  position: absolute;
+  top: 18%;
+  right: 4%;
+  width: 160px;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+}
+.bg-projects-green {
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  width: 200px;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+@media (max-width: 900px) {
+  .bg-about-green, .bg-edu-green, .bg-projects-green { display: none; }
+}
+/* ── CUSTOM CIRCUIT BACKGROUND ── */
+.bg-circuit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.22;
+}
+
+@media (max-width: 900px) {
+  .bg-circuit { display: none; }
+}
 /* ============================================================
    animations.css — Scroll reveals, keyframes, transitions
    ============================================================ */
@@ -28,13 +173,48 @@
   100% { background-position: 400px 0; }
 }
 
-/* ── HERO ENTRANCE ── */
 .hero-tag        { animation: fadeUp 0.7s ease both; }
 .hero h1         { animation: fadeUp 0.7s 0.1s ease both; }
 .hero-subtitle   { animation: fadeUp 0.7s 0.2s ease both; }
 .hero-actions    { animation: fadeUp 0.7s 0.3s ease both; }
 .hero-stats      { animation: fadeUp 0.7s 0.4s ease both; }
 .hero-right      { animation: fadeIn 1s 0.45s ease both; }
+
+/* ── THEMED ANIMATED BACKGROUNDS ── */
+.bg-anim {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+}
+.bg-digital-marketing {
+  top: 8%;
+  left: 2%;
+  width: 320px;
+  height: 120px;
+}
+.bg-uiux {
+  top: 60%;
+  left: 10%;
+  width: 180px;
+  height: 180px;
+}
+.bg-psychology {
+  top: 30%;
+  right: 8%;
+  width: 160px;
+  height: 120px;
+}
+.bg-cyber {
+  bottom: 10%;
+  right: 12%;
+  width: 120px;
+  height: 120px;
+}
+
+@media (max-width: 900px) {
+  .bg-anim { display: none; }
+}
 
 /* ── SCROLL REVEAL ── */
 .reveal {
