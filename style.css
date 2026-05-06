@@ -482,6 +482,15 @@ h1 {
   color: var(--text-dim); letter-spacing: .05em; margin-top: 4px;
 }
 
+/* Consistent description style for certification cards */
+.cert-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
 /* ── ACTIVITIES ── */
 .activities-grid { display: flex; flex-wrap: wrap; gap: 3px; }
 .activity-card {
